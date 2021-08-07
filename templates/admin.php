@@ -115,12 +115,7 @@ $body = wp_json_encode( array(
 
 $data = wp_safe_remote_post($api_url, array(
   'method'      => 'POST',
-    'headers'     => array(
-    'Content-Type' => 'application/json',
-    'X-API-Secret' => 'rLdaB98AmmxmzoiSKDJKdwLENJCBa5N7smZD2vASjPwYrr6ufAEEpRqbQ4PM72ud8JWJChJmTh78',   
-      'Cookie' => 'ARRAffinity=7351a7d89b283d12740a276fc545fe79b9daa7dfff1a976661cf247699ef0b3e',
-    'BusinessID' =>'b2b05966-4461-45ea-a9e9-08d8f8fda462'
-  ),
+    'headers'     => $header_data,
     'body'        => $body,    
     'data_format' => 'body',
 ));
